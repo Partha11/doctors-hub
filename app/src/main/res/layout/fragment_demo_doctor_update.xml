@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DemoDoctorUpdateFragment">
+
+    <LinearLayout
+        android:id="@+id/demoFields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/layout_bg_white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="35sp"
+        android:layout_marginRight="35sp"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10sp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="5sp"
+                android:hint="First Name"
+                android:gravity="center"
+                android:inputType="text"
+                android:background="@drawable/show_individual_fields"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="25sp"
+                android:focusable="false"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="5sp"
+                android:hint="Last Name"
+                android:gravity="center"
+                android:inputType="text"
+                android:background="@drawable/show_individual_fields"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="25sp"
+                android:focusable="false"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Details"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:background="@drawable/show_individual_fields"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginBottom="10sp"
+            android:focusable="false" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Appointment Date"
+            android:focusable="false"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:background="@drawable/show_individual_fields"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginBottom="10sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="number"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:background="@drawable/show_individual_fields"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginBottom="10sp"
+            android:focusable="false" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:background="@drawable/show_individual_fields"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginBottom="30sp"
+            android:focusable="false" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/addDoctorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_pink"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginTop="60sp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_add_doctor"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:maxHeight="70dp"
+            android:maxWidth="70dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/textview_card_style"
+            android:text="Add Doctor"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_regular"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/updateAndViewDoctorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/addDoctorLayout"
+        android:baselineAligned="false"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/updateDoctorLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_indigo">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_update_doctor"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:maxHeight="70dp"
+                android:maxWidth="70dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/textview_card_style"
+                android:text="Update Doctor"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewDoctorLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_amber">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_view_doctors"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:maxHeight="70dp"
+                android:maxWidth="70dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/textview_card_style"
+                android:text="View Doctors"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addAndViewMedicalHistory"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/updateAndViewDoctorLayout"
+        android:baselineAligned="false"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/addMedicalHistory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_green">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_add_medical"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:maxHeight="70dp"
+                android:maxWidth="70dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/textview_card_style"
+                android:text="Add Medical History"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewMedicalHistory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_cyan">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_show_medical"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:maxHeight="70dp"
+                android:maxWidth="70dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/textview_card_style"
+                android:text="View Medical History"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

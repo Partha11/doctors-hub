@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMedicalHistoryActivity">
+
+    <ImageView
+        android:id="@+id/medicalHistoryImageView"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_blank_image"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/image_bg"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="20sp"/>
+
+    <TextView
+        android:id="@+id/takePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medicalHistoryImageView"
+        android:text="Take Photo"
+        android:textSize="25sp"
+        android:layout_margin="20sp"
+        android:background="@drawable/layout_bg"
+        android:drawableLeft="@drawable/ic_add_photo"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:fontFamily="@font/ubuntu_regular"
+        android:textColor="@color/deepBlue"
+        android:focusable="false"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/doctorNameHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/takePhoto"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/layout_bg"
+        android:hint="Doctor's Name"
+        android:textSize="25sp"
+        android:fontFamily="@font/ubuntu_regular"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/deepBlue" />
+
+    <EditText
+        android:id="@+id/doctorDetailsHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/doctorNameHistory"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/layout_bg"
+        android:hint="Doctor's Details"
+        android:textSize="25sp"
+        android:fontFamily="@font/ubuntu_regular"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/deepBlue" />
+
+    <TextView
+        android:id="@+id/appointmentDateHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/doctorDetailsHistory"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/layout_bg"
+        android:text="Date"
+        android:textSize="25sp"
+        android:fontFamily="@font/ubuntu_regular"
+        android:gravity="center"
+        android:layout_marginTop="20sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:focusable="false"
+        android:textColor="@color/orange" />
+
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateDoctorFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/updateFieldsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/layout_bg_white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="35sp"
+            android:layout_marginRight="35sp" >
+
+            <EditText
+                android:id="@+id/updateNameField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="5sp"
+                android:hint="Name"
+                android:gravity="center"
+                android:inputType="text"
+                android:background="@drawable/add_update_fields_individual"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="25sp"
+                android:layout_marginBottom="10sp"/>
+
+
+            <EditText
+                android:id="@+id/updateDetailsField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Details"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:background="@drawable/add_update_fields_individual"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:layout_marginBottom="10sp"/>
+
+            <EditText
+                android:id="@+id/updateAppointmentField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Appointment Date"
+                android:focusable="false"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:background="@drawable/add_update_fields_individual"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:layout_marginBottom="10sp"/>
+
+            <EditText
+                android:id="@+id/updateNumberField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:background="@drawable/add_update_fields_individual"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:layout_marginBottom="10sp"/>
+
+            <EditText
+                android:id="@+id/updateEmailField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:background="@drawable/add_update_fields_individual"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:layout_marginBottom="30sp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/updateDoctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/updateFieldsLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10sp"
+            android:text="Update"
+            android:fontFamily="@font/ubuntu_regular"
+            android:background="@drawable/update_button_bg"
+            android:textAllCaps="false"
+            android:textSize="25sp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

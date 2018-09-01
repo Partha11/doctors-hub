@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddDoctor"
+    android:screenOrientation="portrait"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:id="@+id/fieldsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/layout_bg_white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="35sp"
+        android:layout_marginRight="35sp"
+        android:layout_marginTop="120dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10sp">
+
+            <EditText
+                android:id="@+id/inputFirstNameField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="5sp"
+                android:hint="First Name"
+                android:gravity="center"
+                android:inputType="text"
+                android:background="@drawable/add_update_fields_individual"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="25sp"/>
+
+            <EditText
+                android:id="@+id/inputLastNameField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="5sp"
+                android:hint="Last Name"
+                android:gravity="center"
+                android:inputType="text"
+                android:background="@drawable/add_update_fields_individual"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="25sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_info"
+                android:paddingLeft="10sp"
+                android:textSize="25sp"
+                android:clickable="false"
+                android:focusable="false"
+                android:background="@drawable/icon_fields_textview"/>
+
+            <EditText
+                android:id="@+id/inputDetailsField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="Details"
+                android:textSize="25sp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10sp"
+                android:background="@drawable/add_update_fields_right"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/ubuntu_regular"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_date"
+                android:paddingLeft="10sp"
+                android:textSize="25sp"
+                android:clickable="false"
+                android:focusable="false"
+                android:background="@drawable/icon_fields_textview"/>
+
+            <EditText
+                android:id="@+id/inputAppointmentField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="Appointment Date"
+                android:focusable="false"
+                android:textSize="25sp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10sp"
+                android:background="@drawable/add_update_fields_right"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/ubuntu_regular"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_phone"
+                android:paddingLeft="10sp"
+                android:textSize="25sp"
+                android:clickable="false"
+                android:focusable="false"
+                android:background="@drawable/icon_fields_textview"/>
+
+            <EditText
+                android:id="@+id/inputPhoneField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:textSize="25sp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10sp"
+                android:background="@drawable/add_update_fields_right"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/ubuntu_regular" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="20sp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_email"
+                android:paddingLeft="10sp"
+                android:textSize="25sp"
+                android:clickable="false"
+                android:focusable="false"
+                android:background="@drawable/icon_fields_textview"/>
+
+            <EditText
+                android:id="@+id/inputEmailField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textSize="25sp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10sp"
+                android:background="@drawable/add_update_fields_right"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/ubuntu_regular"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/logo_bg"
+        android:src="@drawable/ic_doctor_logo"
+        android:paddingTop="10sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80sp"
+        android:maxHeight="70dp"
+        android:maxWidth="70dp" />
+
+    <Button
+        android:id="@+id/saveDoctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fieldsLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="Save"
+        android:background="@drawable/save_button_bg"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="25sp"/>
+
+</RelativeLayout>
