@@ -6,108 +6,129 @@
     android:layout_height="match_parent"
     tools:context=".ShowIndividualDoctor">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:scrollbarSize="1dp"
+        android:verticalScrollbarPosition="right">
 
-    <LinearLayout
-        android:id="@+id/imageLayout"
-        android:layout_width="340sp"
-        android:layout_height="260sp"
-        android:layout_margin="10sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20sp"
-        android:background="@drawable/image_bg">
-
-        <ImageView
-            android:id="@+id/doctorLogo"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY" />
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/imageLayout"
+                android:layout_width="340sp"
+                android:layout_height="260sp"
+                android:layout_margin="10sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/image_bg">
 
-    <LinearLayout
-        android:id="@+id/fieldsLayoutIndividual"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/layout_bg_white"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="35sp"
-        android:layout_marginRight="35sp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/imageLayout">
+                <ImageView
+                    android:id="@+id/doctorLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
 
-        <TextView
-            android:id="@+id/nameFieldIndividual"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10sp"
-            android:text="Name"
-            android:gravity="center"
-            android:background="@drawable/show_individual_fields"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:fontFamily="@font/ubuntu_regular"
-            android:textSize="25sp"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/detailsFieldIndividual"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Details"
-            android:textSize="25sp"
-            android:gravity="center"
-            android:background="@drawable/show_individual_fields"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:fontFamily="@font/ubuntu_regular"
-            android:layout_marginBottom="10sp"/>
+            <LinearLayout
+                android:id="@+id/fieldsLayoutIndividual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/layout_bg_white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="35sp"
+                android:layout_marginRight="35sp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/imageLayout">
 
-        <TextView
-            android:id="@+id/appointmentFieldIndividual"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Appointment Date"
-            android:textSize="25sp"
-            android:gravity="center"
-            android:background="@drawable/show_individual_fields"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:fontFamily="@font/ubuntu_regular"
-            android:layout_marginBottom="10sp"/>
+                <TextView
+                    android:id="@+id/nameFieldIndividual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10sp"
+                    android:text="Name"
+                    android:gravity="center"
+                    android:background="@drawable/show_individual_fields"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:textSize="25sp"/>
 
-        <TextView
-            android:id="@+id/phoneFieldIndividual"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Phone Number"
-            android:textSize="25sp"
-            android:gravity="center"
-            android:background="@drawable/show_individual_fields"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:fontFamily="@font/ubuntu_regular"
-            android:layout_marginBottom="10sp"/>
+                <TextView
+                    android:id="@+id/detailsFieldIndividual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Details"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:background="@drawable/show_individual_fields"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:layout_marginBottom="10sp"/>
 
-        <TextView
-            android:id="@+id/emailFieldIndividual"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email"
-            android:textSize="25sp"
-            android:gravity="center"
-            android:background="@drawable/show_individual_fields"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:fontFamily="@font/ubuntu_regular"
-            android:layout_marginBottom="20dp"/>
+                <TextView
+                    android:id="@+id/appointmentFieldIndividual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Appointment Date"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:background="@drawable/show_individual_fields"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:layout_marginBottom="10sp"/>
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/phoneFieldIndividual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:background="@drawable/show_individual_fields"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:layout_marginBottom="10sp"/>
 
-</RelativeLayout>
+                <TextView
+                    android:id="@+id/emailFieldIndividual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:background="@drawable/show_individual_fields"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/openUpdateDoctorButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/fieldsLayoutIndividual"
+                android:background="@drawable/add_button_bg"
+                android:text="Update Doctor"
+                android:textSize="25sp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:textAllCaps="false"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

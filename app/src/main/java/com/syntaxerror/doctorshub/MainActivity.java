@@ -109,7 +109,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void updateDoctor() {
 
         Intent intent = new Intent(MainActivity.this, UpdateDoctor.class);
+        String fromStr = "MainActivity";
 
+        intent.putExtra("Data", fromStr);
         startActivity(intent);
     }
 

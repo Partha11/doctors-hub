@@ -121,7 +121,8 @@ public class AddMedicalHistoryActivity extends AppCompatActivity implements View
 
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            mPhotoData = encodeToBase64 (imageBitmap,Bitmap.CompressFormat.JPEG, 90);
+
+            mPhotoData = Image.encodeToBase64(imageBitmap,Bitmap.CompressFormat.JPEG, 90);
             mImageView.setImageBitmap(imageBitmap);
         }
     }
@@ -245,13 +246,6 @@ public class AddMedicalHistoryActivity extends AppCompatActivity implements View
         else
 
             Toast.makeText(this, "Failed!!", Toast.LENGTH_SHORT).show();
-    }
-
-    public static String encodeToBase64(Bitmap image, Bitmap.CompressFormat compressFormat, int quality) {
-
-        ByteArrayOutputStream byteArrayOS = new ByteArrayOutputStream();
-        image.compress(compressFormat, quality, byteArrayOS);
-        return Base64.encodeToString(byteArrayOS.toByteArray(), Base64.DEFAULT);
     }
 
     @Override

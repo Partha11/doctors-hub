@@ -56,12 +56,6 @@ public class ShowIndividualMedicalHistory extends AppCompatActivity {
         showAppointmentDate.setText(medicalHistory.getAppointmentDate());
         showDetails.setText(medicalHistory.getDoctorDetails());
 
-        imageView.setImageBitmap(decodeBase64(medicalHistory.getPrescription()));
-    }
-
-    public static Bitmap decodeBase64(String input) {
-
-        byte[] decodedBytes = Base64.decode(input, 0);
-        return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
+        imageView.setImageBitmap(Image.decodeBase64(medicalHistory.getPrescription()));
     }
 }

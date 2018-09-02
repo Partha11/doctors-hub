@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 public class UpdateDoctor extends AppCompatActivity implements View.OnClickListener, UpdateDoctorFragment.OnFragmentInteractionListener, DemoDoctorUpdateFragment.OnFragmentInteractionListener {
 
     private FragmentManager fragmentManager;
@@ -22,6 +24,8 @@ public class UpdateDoctor extends AppCompatActivity implements View.OnClickListe
     private EditText searchName;
 
     private Button mSearchNameButton;
+    private Doctor doctor;
+    private String name;
 
     private DatabaseManager dbManager;
 
@@ -30,31 +34,43 @@ public class UpdateDoctor extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_doctor);
 
-        demoDoctorUpdateFragment = new DemoDoctorUpdateFragment();
-        updateDoctorFragment = new UpdateDoctorFragment();
-
         initFields();
 
-        defaultFragment();
+        String fromActivity = getIntent().getStringExtra("Data");
+
+        if (fromActivity.equals("MainActivity")) {
+
+            Toast.makeText(this, "MainActivity", Toast.LENGTH_SHORT).show();;
+            defaultFragment();
+        }
+
+        else {
+
+            Toast.makeText(this, "Individual Doctor", Toast.LENGTH_SHORT).show();
+            Gson gson = new Gson();
+            String object = getIntent().getStringExtra("Data");
+            doctor = gson.fromJson(object, Doctor.class);
+            setDoctor(doctor);
+        }
     }
 
     private void initFields() {
 
-        searchName = findViewById(R.id.searchDoctorName);
+        demoDoctorUpdateFragment = new DemoDoctorUpdateFragment();
+        updateDoctorFragment = new UpdateDoctorFragment();
 
+        searchName = findViewById(R.id.searchDoctorName);
         mSearchNameButton = findViewById(R.id.searchNameButton);
 
         mSearchNameButton.setOnClickListener(UpdateDoctor.this);
 
         dbManager = new DatabaseManager(UpdateDoctor.this);
-
         fragmentManager = getSupportFragmentManager();
     }
 
     private void defaultFragment() {
 
         fragmentTransaction = fragmentManager.beginTransaction().replace(R.id.fragmentLayout, demoDoctorUpdateFragment);
-
         fragmentTransaction.commit();
     }
 
@@ -72,11 +88,14 @@ public class UpdateDoctor extends AppCompatActivity implements View.OnClickListe
 
     private void searchDoctor() {
 
-        String name = searchName.getText().toString();
+        name = searchName.getText().toString();
+        doctor = dbManager.getDataByName(name);
+        setDoctor(doctor);
+    }
 
-        Doctor doctor = dbManager.getDataByName(name);
+    private void setDoctor(Doctor doctor) {
 
-        if (doctor.getDoctorId() != 0) {
+        if (doctor != null) {
 
             Bundle bundle = new Bundle();
 

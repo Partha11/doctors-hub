@@ -5,6 +5,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -136,11 +137,20 @@ public class UpdateDoctorFragment extends Fragment implements View.OnClickListen
 
     private void updateButtonClicked() {
 
-        String name = updateName.getText().toString();
-        String number = updateNumber.getText().toString();
-        String appointmentDate = updateCreationTime;
-        String details = updateDetails.getText().toString();
-        String email = updateEmail.getText().toString();
+        String name = updateName.getText().toString().trim();
+        String number = updateNumber.getText().toString().trim();
+        String details = updateDetails.getText().toString().trim();
+        String email = updateEmail.getText().toString().trim();
+
+        String appointmentDate;
+
+        if (TextUtils.isEmpty(updateCreationTime))
+
+            appointmentDate = updateAppointmentDate.getText().toString();
+
+        else
+
+            appointmentDate = updateCreationTime;
 
         Doctor doctor = new Doctor(doctorId, name, number, details, appointmentDate, email);
 

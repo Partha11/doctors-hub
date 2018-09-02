@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,13 +21,15 @@ import com.google.gson.Gson;
 
 import org.w3c.dom.Text;
 
-public class ShowIndividualDoctor extends AppCompatActivity {
+public class ShowIndividualDoctor extends AppCompatActivity implements View.OnClickListener {
 
     private TextView showName;
     private TextView showDetails;
     private TextView showMail;
     private TextView showPhone;
     private TextView showAppointmentDate;
+
+    private Button mUpdateDoctorButton;
 
     private ImageView imageView;
 
@@ -42,7 +45,6 @@ public class ShowIndividualDoctor extends AppCompatActivity {
         Gson gson = new Gson();
 
         String object = getIntent().getStringExtra("Doctor");
-
         doctor = gson.fromJson(object, Doctor.class);
 
         setFields();
@@ -81,7 +83,11 @@ public class ShowIndividualDoctor extends AppCompatActivity {
         showPhone = findViewById(R.id.phoneFieldIndividual);
         showDetails = findViewById(R.id.detailsFieldIndividual);
 
+        mUpdateDoctorButton = findViewById(R.id.openUpdateDoctorButton);
+
         imageView = findViewById(R.id.doctorLogo);
+
+        mUpdateDoctorButton.setOnClickListener(this);
     }
 
     @SuppressLint("ResourceType")
@@ -94,5 +100,21 @@ public class ShowIndividualDoctor extends AppCompatActivity {
         showDetails.setText(doctor.getDoctorDetails());
 
         imageView.setImageResource(R.raw.doctor_logo);
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        if (view.getId() == R.id.openUpdateDoctorButton) {
+
+            Intent intent = new Intent(ShowIndividualDoctor.this, UpdateDoctor.class);
+            Gson gson = new Gson();
+            String object = gson.toJson(doctor);
+
+            intent.putExtra("Data", object);
+
+            startActivity(intent);
+            finish();
+        }
     }
 }
